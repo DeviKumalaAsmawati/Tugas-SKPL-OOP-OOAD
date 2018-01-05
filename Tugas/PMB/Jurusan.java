@@ -4,6 +4,7 @@ class Jurusan{
     Scanner scan = new Scanner (System.in);
     int jurus;
     String jawab;
+    Akademik akad = new Akademik();
     void pilihjurusan(){
     
 
@@ -52,6 +53,11 @@ case 3 :
         }        
     break;    
         }
+    
+System.out.println("======= test selesai =======");
+System.out.println("============================");
+
+akad.informasi();
 
 
 

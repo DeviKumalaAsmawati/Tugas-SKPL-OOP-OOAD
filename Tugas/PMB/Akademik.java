@@ -2,9 +2,9 @@ import java.util.Scanner;
 class Akademik {
     
     Scanner scan = new Scanner (System.in);
-    String nama,nim ;
-    Final Double n_akhir , nilai ;
-
+    String nama ;
+    String no_reg ;
+    int n_akhir ;
     void informasi(){
 
     System.out.println("================================");
@@ -12,39 +12,25 @@ class Akademik {
 	System.out.println("");
 
 	System.out.print("Masukan No_Reg      :");
-	nim = input.nextLine();
+	no_reg = scan.nextLine();
 	System.out.print("Masukan Nama        :");
-	nama = input.nextLine();
+	nama = scan.nextLine();
 	System.out.print("Masukan Nilai Test  :");
-    nilai = input.nextint();
-	    
-        if (n_akhir >= 85 && n_akhir <=100){
-            grade = 'A';
+    n_akhir = scan.nextInt();
+    
+    
+    if (n_akhir >= 70 && n_akhir <=100 ){
+            System.out.println(" Selamat anda Lulus Dengan NIM 15 123 "+no_reg );
         }
-        else if (n_akhir > 75 && n_akhir < 85){
-            grade = 'B';
-        }
-        else if (n_akhir > 65 && n_akhir < 75){
-            grade = 'C';
-        }
-        else if (n_akhir > 50 && n_akhir < 65){
-            grade = 'D';
-        }
-        else {
-            grade = 'E';
-        }
-        if (grade == 'A' || grade == 'B' || grade == 'C'){
-            System.out.println("\n"+nama+" dengan NIM "+no_reg+" memiliki nilai akhir "+n_akhir+" = ("+grade+")"+""
-                    + "\n dan dinyatakan Lulus");
-        }
-        else {
-            System.out.println("\n"+nama+" memiliki nilai akhir "+n_akhir+" = ("+grade+")"+""
-                    + "\n dan dinyatakan Tidak Lulus");
+    else {
+            System.out.println("Maaf anda Tidak Lulus");
     System.out.println("=======================================");
 	System.out.println("=======================================");
 
-    }
+     }
 
-}
+
+
+  }
 
 }

@@ -1,6 +1,8 @@
 import java.util.Scanner;
 class Bayar{
     String biaya;
+    Jurusan jurusan = new Jurusan();
+
     void pembayaran(){
     Scanner scan = new Scanner (System.in);
 
@@ -8,7 +10,9 @@ class Bayar{
 	biaya = scan.nextLine();
     
     System.out.println(" Transaksi telah Berhasil ");
-        
+
+    jurusan.pilihjurusan();
+
     }
 
 }

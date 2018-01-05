@@ -22,12 +22,16 @@ public class Menu {
         break ;
     
     case 2 :
-        Perwalian wali = new Perwalian();
-        wali.Wali();
-        break;
+        Perwalian perwalian = new Perwalian();
+        perwalian.Wali();
+        break ;
 
+    case 3 :
+        System.exit(0);
+        break ;
 
-
+  
+        
                     }  
 
          }
