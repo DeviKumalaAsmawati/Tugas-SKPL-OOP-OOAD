@@ -4,7 +4,8 @@ class Akademik {
     Scanner scan = new Scanner (System.in);
     String nama ;
     String no_reg ;
-    int n_akhir ;
+    String alamat ;
+    int nilai ;
     void informasi(){
 
     System.out.println("================================");
@@ -13,24 +14,31 @@ class Akademik {
 
 	System.out.print("Masukan No_Reg      :");
 	no_reg = scan.nextLine();
+    if(no_reg.isEmpty()){
+            no_reg = scan.nextLine();
+        }
 	System.out.print("Masukan Nama        :");
 	nama = scan.nextLine();
-	System.out.print("Masukan Nilai Test  :");
-    n_akhir = scan.nextInt();
-    
-    
-    if (n_akhir >= 70 && n_akhir <=100 ){
-            System.out.println(" Selamat anda Lulus Dengan NIM 15 123 "+no_reg );
+    if(nama.isEmpty()){
+            nama = scan.nextLine();
         }
-    else {
-            System.out.println("Maaf anda Tidak Lulus");
-    System.out.println("=======================================");
-	System.out.println("=======================================");
-
-     }
-
-
-
+    System.out.print("Masukan Alamat      :");
+	alamat = scan.nextLine();
+    if(alamat.isEmpty()){
+            alamat = scan.nextLine();
+        }
+	System.out.print("Masukan Nilai Test  :");
+    nilai = scan.nextInt();
+    if ( nilai >=70 && nilai <=100 ){
+            System.out.println(" NIM Anda Adalah : 10123" + no_reg);
+            System.out.println("=================================="); 
+        }
+        else{
+            System.out.println("           Maaf anda Tidak Lulus     ");
+            System.out.println("    Anda tidak dapat masuk di kampus ini     ");
+        System.out.println("=======================================");        
+        }
+    
   }
 
 }

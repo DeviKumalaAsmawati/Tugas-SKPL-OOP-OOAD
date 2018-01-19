@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class Maba{
-	String no_reg;
+	int no_reg;
 	String nama;
 	String alamat;	
 	Scanner scan = new Scanner (System.in);
@@ -14,9 +14,11 @@ class Maba{
 	System.out.println("");
 
 	System.out.print("Masukan No_Registrasi :");
-	no_reg = scan.nextLine();
+	no_reg = scan.nextInt();
+	System.out.println("");
 	System.out.print("Masukan Nama Lengkap  :");
 	nama = scan.nextLine();
+	System.out.println("");
 	System.out.print("Masukan Alamat        :");
 	alamat = scan.nextLine();
 	System.out.println("");

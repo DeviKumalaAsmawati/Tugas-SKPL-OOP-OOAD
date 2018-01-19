@@ -2,17 +2,24 @@ import java.util.Scanner;
 class Bayar{
     String biaya;
     Jurusan jurusan = new Jurusan();
-
-    void pembayaran(){
     Scanner scan = new Scanner (System.in);
 
-	System.out.print("Masukan Biaya Pendaftaran :");
+    void pembayaran(){
+    System.out.println("Biaya Pendaftaran = Rp.150000");
+	System.out.print("Masukan Biaya Pendaftaran : ");
 	biaya = scan.nextLine();
-    
-    System.out.println(" Transaksi telah Berhasil ");
-
-    jurusan.pilihjurusan();
-
+    if(biaya.isEmpty()){
+            biaya = scan.nextLine();
+        }
+    if ( biaya.equalsIgnoreCase("150000") ){
+        System.out.println("     Transaksi telah Berhasil     ");
+        System.out.println("==================================");
+        jurusan.pilihjurusan();
+    } else {
+        System.out.println("  Seusaikan Pembayaran yang telah ditentukan   ");
+    	System.out.println("===============================================");
+        pembayaran();
+    }
     }
 
 }
